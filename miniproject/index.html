@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Workshop</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <h1>Pendaftaran Workshop</h1>
+        <p class="deskripsi">
+            Silakan isi formulir untuk mendaftar workshop.
+        </p>
+
+        <form id="formWorkshop" novalidate>
+            <label for="nama">Nama lengkap</label>
+            <input
+                type="text"
+                id="nama"
+                maxlength="40"
+                placeholder="Masukkan nama lengkap"
+            >
+            <p class="petunjuk">
+                Jumlah karakter:
+                <span id="jumlahKarakter">0</span>/40
+            </p>
+
+            <label for="email">Alamat email</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="contoh@email.com"
+            >
+
+            <label for="sesi">Pilih sesi workshop</label>
+            <select id="sesi">
+                <option value="">-- Pilih sesi --</option>
+                <option value="HTML dan CSS">HTML dan CSS</option>
+                <option value="JavaScript Dasar">JavaScript Dasar</option>
+                <option value="Web Development">Web Development</option>
+            </select>
+
+            <button type="submit">Daftar Sekarang</button>
+            <button type="reset" id="tombolReset" class="reset">
+                Reset Form
+            </button>
+        </form>
+
+        <div id="pesan" class="pesan" aria-live="polite"></div>
+
+        <section class="ringkasan">
+            <h2>Ringkasan Pendaftaran</h2>
+            <p>Nama: <span id="ringkasanNama">-</span></p>
+            <p>Email: <span id="ringkasanEmail">-</span></p>
+            <p>Sesi: <span id="ringkasanSesi">-</span></p>
+        </section>
+    </main>
+</body>
+</html>
